@@ -94,7 +94,7 @@ EmuGSS_TCProgram3_5 prog_FT_0050_step_2(FT_SOLO_EPD_ICU_SERV_3_0050_TIME_step2,
 EmuGSS_TCProgram20_1 prog_FT_0060_step_0(FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step0,
 		"FT_SOLO_EPD_ICU_SERV_3_0060 step 0, );
 EmuGSS_TCProgram20_3 prog_FT_0060_step_0(FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step1,
-		"FT_SOLO_EPD_ICU_SERV_3_0060 step 0, );
+		"FT_SOLO_EPD_ICU_SERV_3_0060 step 1, );
 
 
 #endif
