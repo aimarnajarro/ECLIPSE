@@ -16,6 +16,7 @@
 #define TM_1_2_SUBTYPE_NOT_VALID_ERROR_CODE 	6
 
 #define TM_1_8_TC_3_X_INVALID_SID 				1
+#define TM_1_8_TC_20_X_INVALID_PID 				2
 
 //SourceID TC Counters
 uint16_t SOLO_Mission_TimeLine_TC_Counter = 0;
@@ -114,7 +115,6 @@ void PUSService1::TryTCAcceptation(CDTCHandler &tcHandler) {
 				//TC Classified as HK_FDIRTC
 				tcHandler.SetExecCtrlAsHK_FDIRTC();
 				break;
-			//TODO Accept TC[3,6] and TC[3,31]
 
 			default:
 				acceptationStatus = TCAcceptationSubTypeError;
@@ -223,7 +223,22 @@ void PUSService1::BuildTM_1_8_TC_3_X_SIDNotValid(CDTCHandler &tcHandler,
 
 	tmHandler.SetUInt16AppDataField(tcHandler.GetPacketID());
 	tmHandler.SetUInt16AppDataField(tcHandler.GetPackSeqCtrl());
+	tmHandler.SetUInt16AppDataField(TM_1_8_TC_3_X_INVALID_SID);
 	tmHandler.SetUInt16AppDataField(SID);
+
+	tmList.AddTM(tmHandler.CloseTM());
+
+}
+
+void PUSService1::BuildTM_1_8_TC_20_X_PIDNotValid(CDTCHandler &tcHandler,
+		CDTMList &tmList, uint16_t PID) {
+
+	CDTMHandler tmHandler(1, 8);
+
+	tmHandler.SetUInt16AppDataField(tcHandler.GetPacketID());
+	tmHandler.SetUInt16AppDataField(tcHandler.GetPackSeqCtrl());
+	tmHandler.SetUInt16AppDataField(TM_1_8_TC_20_X_INVALID_PID);
+	tmHandler.SetUInt16AppDataField(PID);
 
 	tmList.AddTM(tmHandler.CloseTM());
 
