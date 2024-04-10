@@ -123,3 +123,29 @@ EmuGSS_TCProgram20_3 prog_FT_0070_step_4(FT_0070_TIME_step4,
 
 #endif
 
+//TO_DO Añadir nuevo test para probar el servicio 5
+#ifdef FT_SOLO_EPD_ICU_Serv5_0080
+
+#define FT_0080_TIME_step0 (UNITIME_AFTER_POWER_ON + 5)
+#define FT_0080_TIME_step1 (UNITIME_AFTER_POWER_ON + 7)
+#define FT_0080_TIME_step2 (UNITIME_AFTER_POWER_ON + 20)
+#define FT_0080_TIME_step3 (UNITIME_AFTER_POWER_ON + 40)
+#define FT_0080_TIME_step4 (UNITIME_AFTER_POWER_ON + 60)
+
+//Se dispone de la siguientes clases, además de las del servicio 12 y 20 que necesitarás utilizar
+
+EmuGSS_TCProgram12_5 prog_FT_0080_step_0(FT_0080_TIME_step0,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 0, Config PMODID 0 for monitoring PID 1",
+		0, 1, 5, 1, 0x4000, 10, 0x4001);
+
+EmuGSS_TCProgram12_1 prog_FT_0080_step_1(FT_0080_TIME_step1,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 1, Enable Monitoring PMODID 0", 0);
+
+EmuGSS_TCProgram5_6 prog_FT_0080_step_x (FT_0080_TIME_step2,
+		"FT_SOLO_EPD_ICU_Monitoring_0080 step y, Enable TM(5,X) RIDs generation.",
+		1, 0);)
+EmuGSS_TCProgram20_3 prog_FT_0080_step_2(FT_0070_TIME_step2,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 2, Update PID 1 to 99", 1, 99);
+
+EmuGSS_TCProgram5_6 prog_FT_0080_step_	()
+#endif
