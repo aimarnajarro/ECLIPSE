@@ -9,8 +9,6 @@
 #include <public/emu_sc_channel_drv_v1.h>
 #include <public/emu_gss_v1.h>
 
-
-
 //#define FT_SOLO_EPD_ICU_SERV_17_0010
 //#define FT_SOLO_EPD_ICU_SERV_9_0020
 //#define FT_SOLO_EPD_ICU_SERV_1_REJECTED_TC_0030
@@ -19,7 +17,9 @@
 //#define FT_SOLO_EPD_ICU_SERV_3_DISABLE_SID0_0040
 //#define FT_SOLO_EPD_ICU_SERV_3_UPDATE_INTERVAL_TC_0050
 
-#define FT_SOLO_EPD_ICU_SERV_20_UPDATE_PARAM_VALUE_0060
+//#define FT_SOLO_EPD_ICU_SERV_20_UPDATE_PARAM_VALUE_0060
+
+#define FT_SOLO_EPD_ICU_Monitoring_0070
 
 #ifdef FT_SOLO_EPD_ICU_SERV_17_0010
 
@@ -51,7 +51,6 @@ EmuGSS_TCProgram17_3 prog_FT_0030_step_0(FT_SOLO_EPD_ICU_SERV_1_0030_TIME,
 
 #endif
 
-
 #ifdef FT_SOLO_EPD_ICU_SERV_3_DISABLE_SID0_0040
 
 #define FT_SOLO_EPD_ICU_SERV_3_0040_TIME (UNITIME_AFTER_POWER_ON + 30)
@@ -60,8 +59,6 @@ EmuGSS_TCProgram3_6 prog_FT_0040_step_0(FT_SOLO_EPD_ICU_SERV_3_0040_TIME,
 		"FT_SOLO_EPD_ICU_SERV_3_0040 step 0, Disable SID 0 ",0);
 
 #endif
-
-
 
 #ifdef FT_SOLO_EPD_ICU_SERV_3_UPDATE_INTERVAL_TC_0050
 
@@ -83,19 +80,46 @@ EmuGSS_TCProgram3_5 prog_FT_0050_step_2(FT_SOLO_EPD_ICU_SERV_3_0050_TIME_step2,
 
 #endif
 
-
 #ifdef FT_SOLO_EPD_ICU_SERV_20_UPDATE_PARAM_VALUE_0060
 
 
 #define FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step0 (UNITIME_AFTER_POWER_ON + 5)
 #define FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step1 (UNITIME_AFTER_POWER_ON + 8)
 
-//TODO
-EmuGSS_TCProgram20_1 prog_FT_0060_step_0(FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step0,
-		"FT_SOLO_EPD_ICU_SERV_3_0060 step 0, ",);
-EmuGSS_TCProgram20_3 prog_FT_0060_step_0(FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step1,
-		"FT_SOLO_EPD_ICU_SERV_3_0060 step 1, );
 
+EmuGSS_TCProgram20_3 prog_FT_0060_step_0(FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step0,
+		"FT_SOLO_EPD_ICU_SERV_20_0060 step 0, Update PID 1 to 99",1,99);
+
+EmuGSS_TCProgram20_1 prog_FT_0060_step_1(FT_SOLO_EPD_ICU_SERV_20_0060_TIME_step1,
+		"FT_SOLO_EPD_ICU_SERV_20_0060 step 1, Get PID 1 Value",1);
+
+
+#endif
+
+#ifdef FT_SOLO_EPD_ICU_Monitoring_0070
+
+#define FT_0070_TIME_step0 (UNITIME_AFTER_POWER_ON + 5)
+#define FT_0070_TIME_step1 (UNITIME_AFTER_POWER_ON + 7)
+#define FT_0070_TIME_step2 (UNITIME_AFTER_POWER_ON + 20)
+#define FT_0070_TIME_step3 (UNITIME_AFTER_POWER_ON + 40)
+#define FT_0070_TIME_step4 (UNITIME_AFTER_POWER_ON + 60)
+
+
+EmuGSS_TCProgram12_5 prog_FT_0070_step_0(FT_0070_TIME_step0,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 0, Config PMODID 0 for monitoring PID 1",
+		0, 1, 5, 1, 0x4000, 10, 0x4001);
+
+EmuGSS_TCProgram12_1 prog_FT_0070_step_1(FT_0070_TIME_step1,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 1, Enable Monitoring PMODID 0", 0);
+
+EmuGSS_TCProgram20_3 prog_FT_0070_step_2(FT_0070_TIME_step2,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 2, Update PID 1 to 99", 1, 99);
+
+EmuGSS_TCProgram20_3 prog_FT_0070_step_3(FT_0070_TIME_step3,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 3, Update PID 1 to 5", 1, 5);
+
+EmuGSS_TCProgram20_3 prog_FT_0070_step_4(FT_0070_TIME_step4,
+		"FT_SOLO_EPD_ICU_Monitoring_0070 step 4, Update PID 1 to 0", 1, 0);
 
 #endif
 
