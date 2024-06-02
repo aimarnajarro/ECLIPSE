@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /*
@@ -10,3 +11,17 @@ sai emu_hw_timecode_drv{
 	uri := .emu_hw_timecode_drv;
 	version :=v1;
 };
+=======
+
+
+/*
+ * SAI Model.
+*/ 
+
+
+sai emu_hw_timecode_drv{
+
+	uri := .emu_hw_timecode_drv;
+	version :=v1;
+};
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git

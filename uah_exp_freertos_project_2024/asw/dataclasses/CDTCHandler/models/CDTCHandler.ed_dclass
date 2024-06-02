@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass CDTCHandler{
 
 
@@ -6,4 +7,14 @@ dataclass CDTCHandler{
 	version := v1;
 
 
+=======
+dataclass CDTCHandler{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.cdtchandler.cdtchandler_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

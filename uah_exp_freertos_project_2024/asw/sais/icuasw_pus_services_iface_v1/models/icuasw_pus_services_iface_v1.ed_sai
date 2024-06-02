@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /*
@@ -10,3 +11,17 @@ sai icuasw_pus_services_iface{
 	uri := .icuasw_pus_services_iface;
 	version :=v1;
 };
+=======
+
+
+/*
+ * SAI Model.
+*/ 
+
+
+sai icuasw_pus_services_iface{
+
+	uri := .icuasw_pus_services_iface;
+	version :=v1;
+};
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git

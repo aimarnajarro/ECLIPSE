@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /*
@@ -10,3 +11,17 @@ sai sc_channel_drv{
 	uri := .sc_channel_drv;
 	version :=v1;
 };
+=======
+
+
+/*
+ * SAI Model.
+*/ 
+
+
+sai sc_channel_drv{
+
+	uri := .sc_channel_drv;
+	version :=v1;
+};
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git

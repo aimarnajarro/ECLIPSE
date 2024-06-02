@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass CDTMHandler{
 
 
@@ -6,4 +7,14 @@ dataclass CDTMHandler{
 	version := v1;
 
 
+=======
+dataclass CDTMHandler{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.cdtmhandler.cdtmhandler_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

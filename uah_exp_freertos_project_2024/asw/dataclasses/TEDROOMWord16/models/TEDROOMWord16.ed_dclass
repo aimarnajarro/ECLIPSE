@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass TEDROOMWord16{
 
 
@@ -6,4 +7,14 @@ dataclass TEDROOMWord16{
 	version := v1;
 
 
+=======
+dataclass TEDROOMWord16{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.TEDROOMWord16.tedroomword16_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass TEDROOMDouble{
 
 
@@ -6,4 +7,14 @@ dataclass TEDROOMDouble{
 	version := v1;
 
 
+=======
+dataclass TEDROOMDouble{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.TEDROOMDouble.tedroomdouble_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

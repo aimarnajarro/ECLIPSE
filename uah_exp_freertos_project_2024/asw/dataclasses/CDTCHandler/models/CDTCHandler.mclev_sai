@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package es.uah.aut.srg.edroom.mclev.data_sai.cdtchandler;
 
 inport es.uah.aut.srg.micobs.langs;
@@ -11,4 +12,19 @@ sai cdtchandler_iface
 	language := CPP(98);
 
 
+=======
+package es.uah.aut.srg.edroom.mclev.data_sai.cdtchandler;
+
+inport es.uah.aut.srg.micobs.langs;
+
+sai cdtchandler_iface
+{
+
+
+
+	version := v1;
+	language := CPP(98);
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass TEDROOMUInt64{
 
 
@@ -6,4 +7,14 @@ dataclass TEDROOMUInt64{
 	version := v1;
 
 
+=======
+dataclass TEDROOMUInt64{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.TEDROOMUInt64.tedroomuint64_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

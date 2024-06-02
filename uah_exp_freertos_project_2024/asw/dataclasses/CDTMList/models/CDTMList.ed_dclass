@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass CDTMList{
 
 
@@ -6,4 +7,14 @@ dataclass CDTMList{
 	version := v1;
 
 
+=======
+dataclass CDTMList{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.cdtmlist.cdtmlist_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

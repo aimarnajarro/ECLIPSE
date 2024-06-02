@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass TEDROOMBool{
 
 
@@ -6,4 +7,14 @@ dataclass TEDROOMBool{
 	version := v1;
 
 
+=======
+dataclass TEDROOMBool{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.TEDROOMBool.tedroombool_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

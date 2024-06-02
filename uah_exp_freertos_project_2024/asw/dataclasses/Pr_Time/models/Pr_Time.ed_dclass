@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass Pr_Time{
 
 
@@ -6,4 +7,14 @@ dataclass Pr_Time{
 	version := v1;
 
 
+=======
+dataclass Pr_Time{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.Pr_Time.pr_time_iface;
+	version := v1;
+
+
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
 };

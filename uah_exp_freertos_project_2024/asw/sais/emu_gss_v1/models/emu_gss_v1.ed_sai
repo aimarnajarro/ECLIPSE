@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /*
@@ -10,3 +11,17 @@ sai emu_gss{
 	uri := .emu_gss;
 	version :=v1;
 };
+=======
+
+
+/*
+ * SAI Model.
+*/ 
+
+
+sai emu_gss{
+
+	uri := .emu_gss;
+	version :=v1;
+};
+>>>>>>> branch 'main' of https://github.com/aimarnajarro/ECLIPSE.git
